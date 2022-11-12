@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+{%load static%}
+<div class="card-group">
+  <div class="row row-cols-3  g-4">
+    {% for vm in vendMachine %}
+    <a href="{% url 'vendingMachine_Details' vm.machine_code  %}"  style="text-decoration:none; color:black;">
+  <div class="col ">
+    <div class="card " style="height=43erm" >
+      <img src="{% static 'image/vending_machine.png'%}" class="card-img-top" alt="vendingMachine" id="vendingMachine">
+      <div class="card-body py-4">
+        <h5 class="card-title">Machine code:{{vm.machine_code}}</h5>
+        <p class="card-text"> Location : {{vm.located_at}}</p>
+        <p class="card-text"> Capacity : {{vm.capacity}}</p>
+        <p class="card-text"> Payment method :{{vm.payment_method}}</p>
+
+      </div>
+    </div>
+  </div>
+   </a>
+    {% endfor %}
+
+</div>
+</div>

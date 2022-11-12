@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+{%load static%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vending machine</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <style>
+        #vendingMachine{
+            transition:transform .4s;
+        }
+        #vendingMachine:hover{
+            transform:scale(1.1);
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container  my-5" >
+     <div class="class text-center">
+<!--         <img src="{% static 'image/stock-vector-vector-logo-of-a-vending-machine-with-food-1627744201.jpg'%}" alt="chiopee vending" style="margin:0">-->
+         <h1> Chicopee Vending</h1>
+        <br/>
+    </div>
+    <div class="class text-center">
+        <h3> Vending Machine</h3>
+        <br/>
+    </div>
+    {% include 'customer/vendMachinecard.html '%}
+
+
+</div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
